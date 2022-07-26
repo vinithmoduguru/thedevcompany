@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 from datetime import timedelta
 from pathlib import Path
 import os
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'rest_framework',
     'corsheaders',
-    'storages',
+    'storages'
 ]
 
 
@@ -186,7 +185,7 @@ EMAIL_HOST_PASSWORD = 'jnwgrldilmuxhgxh'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
