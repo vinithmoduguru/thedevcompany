@@ -30,7 +30,7 @@ class Profile(models.Model):
         return str(self.username)
 
     class Meta:
-        ordering = ['created']
+        ordering = ['profile_image', 'created']
 
     @property
     def imageURL(self):
