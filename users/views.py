@@ -15,7 +15,7 @@ def loginUser(request):
         return redirect('profiles')
 
     if request.method == 'POST':
-        username = request.POST['username'].lower().trim()
+        username = request.POST['username'].lower().strip()
         password = request.POST['password']
 
         try:

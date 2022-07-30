@@ -19,7 +19,8 @@ def createProfile(sender, instance, created, **kwargs):
         )
 
         subject = 'Welcome to Dev Search'
-        message = 'We are glad you are here'
+        message = f"Hey {user.first_name},\n I’m Vinith, the owner of thedevcompany and I’d like to personally thank you for signing up to our website. We established thedevcompany in order to occassionally update your work and stay connected.\n\nI’d love to hear what you think of this website and if there is anything we can improve. If you have any questions, please reply to this email. I’m always happy to help!\n\nThanks and be well,\nVinith"
+
 
         send_mail(
             subject,
