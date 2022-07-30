@@ -21,7 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-xtl#a+q^u3f8u9-tm2!!vj48$_#_q!a9!skq5_^jkskqy7$*!g'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -126,9 +125,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'devsearch',
-        'USER':  'vinithmoduguru',
-        'PASSWORD': 'Poo&vinith1',
-        'HOST': 'database-1.cckfgv0hzrnq.us-west-2.rds.amazonaws.com',
+        'USER':  os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '5432',
     }
 }
@@ -180,7 +179,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'vinith1142@gmail.com'
-EMAIL_HOST_PASSWORD = 'jnwgrldilmuxhgxh'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -202,9 +201,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIAWXXXKOP7UJXFTKV2'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 
-AWS_SECRET_ACCESS_KEY = 'SCIxJg33WITf8g2+gLVQanv81C4z15jz8UMTvXkD'
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 AWS_STORAGE_BUCKET_NAME = 'thedevcompany-bucket'
 
